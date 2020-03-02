@@ -5,11 +5,13 @@
   "scripts": {
     "serve": "vue-cli-service serve",
     "build": "vue-cli-service build",
-    "lint": "vue-cli-service lint"
+    "lint": "vue-cli-service lint",
+    "mock-server": "node ./server/server.js"
   },
   "dependencies": {
     "apollo-boost": "^0.4.7",
     "core-js": "^3.4.3",
+    "element-ui": "^2.13.0",
     "graphql": "^14.5.8",
     "graphql-tag": "^2.10.1",
     "vue": "^2.6.10",
@@ -27,6 +29,7 @@
     "@vue/cli-service": "^4.1.0",
     "@vue/eslint-config-prettier": "^5.0.0",
     "@vue/eslint-config-typescript": "^4.0.0",
+    "cors": "^2.8.5",
     "eslint": "^5.16.0",
     "eslint-plugin-prettier": "^3.1.1",
     "eslint-plugin-vue": "^5.0.0",
@@ -39,7 +42,8 @@
     "vue-template-compiler": "^2.6.10"
   },
   "gitHooks": {
-    "pre-commit": "lint-staged"
+    "pre-commit": "lint-staged",
+    "post-commit": "git update-index --again"
   },
   "lint-staged": {
     "*.{ts,vue}": [

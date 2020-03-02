@@ -1,27 +1,13 @@
 import Vue from "vue";
+import ElementUI from "element-ui";
 import App from "./App.vue";
 import router from "./router";
 import store from "./store";
 
+import "element-ui/lib/theme-chalk/index.css";
+
 Vue.config.productionTip = false;
-
-import { getShopInfo, getShopLocation } from "./api/common";
-import ApolloClient from "apollo-boost";
-
-const client = new ApolloClient();
-
-client
-  .query({
-    query: getShopLocation,
-    variables: {
-      province: "四川省",
-      city: "成都市"
-    }
-  })
-  .then(data => console.log("----------query data", data))
-  .catch(err => console.log("-----------err", err));
-
-console.log("---------------", getShopInfo);
+Vue.use(ElementUI);
 
 new Vue({
   router,
