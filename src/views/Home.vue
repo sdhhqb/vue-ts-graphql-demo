@@ -1,10 +1,10 @@
 <template>
   <div class="home">
     <el-row>
-      <el-col :span="6" :offset="3">
+      <el-col :span="6" :offset="3" :xs="12">
         <img class="poster" src="../assets/part2.webp" alt="" />
       </el-col>
-      <el-col :span="12">
+      <el-col :span="12" :xs="18">
         <ul class="info-rows">
           <li>
             <h1>{{ mainData.name }}</h1>

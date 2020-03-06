@@ -10,6 +10,12 @@ yarn install
 yarn serve
 ```
 
+### 启动mock server
+```
+yarn mock-server
+```
+graphiql: [http://localhost:3000/graphiql](http://localhost:3000/graphiql)
+
 ### Compiles and minifies for production
 ```
 yarn build
